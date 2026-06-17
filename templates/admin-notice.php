@@ -7,9 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="ventara-admin-notice__inner">
         <div class="ventara-admin-notice__logo">
             <a href="https://bullermeedia.ee" target="_blank" rel="noopener noreferrer">
-                <img src="https://ventara.ee/wp-content/uploads/2026/03/ventara_1.jpeg" alt="Ventara logo">
-            </a>
-        </div>
+                    <img src="https://ventara.ee/wp-content/uploads/2026/03/ventara_1.jpeg" alt="<?php esc_attr_e( 'Ventara logo', 'ventara-core' ); ?>">
 
         <div class="ventara-admin-notice__content">
             <div class="ventara-admin-notice__title">

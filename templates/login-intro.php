@@ -44,11 +44,16 @@ if ( ! defined( 'ABSPATH' ) ) {
     </a>
 </div>
 
+<?php
+$branding_options = get_option( 'ventara_core_options', array() );
+$business_name = isset( $branding_options['business_name'] ) ? sanitize_text_field( $branding_options['business_name'] ) : '';
+$display_name = $business_name ? $business_name : get_bloginfo( 'name' );
+?>
 <div class="ventara-login-info">
     <div class="ventara-login-info__message">
         <?php printf(
             esc_html__( 'Oled hetkel sisse logimas kodulehe %s admin keskkonda.', 'ventara-core' ),
-            '<span class="website_name">' . esc_html( get_bloginfo( 'name' ) ) . '</span>'
+            '<span class="website_name">' . esc_html( $display_name ) . '</span>'
         ); ?>
     </div>
 

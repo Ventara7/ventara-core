@@ -2,3 +2,129 @@
 .ventara-core-dashboard h1 {
     margin-bottom: 1rem;
 }
+
+.ventara-core-audit {
+    max-width: 1200px;
+}
+
+.ventara-audit-summary-card {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1.5rem;
+    padding: 1.75rem;
+    margin-bottom: 2rem;
+    border-radius: 16px;
+    background: #ffffff;
+    border: 1px solid #e1e4e8;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.ventara-audit-status-good {
+    border-color: #1e7e34;
+}
+
+.ventara-audit-status-warning {
+    border-color: #d39e00;
+}
+
+.ventara-audit-status-critical {
+    border-color: #bd2130;
+}
+
+.ventara-audit-score {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.ventara-audit-score-value {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.ventara-audit-score-label {
+    display: block;
+    color: #6c757d;
+    font-size: 0.95rem;
+}
+
+.ventara-audit-summary-text {
+    display: grid;
+    gap: 0.5rem;
+    align-content: center;
+}
+
+.ventara-audit-summary-status {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.ventara-audit-summary-description {
+    margin: 0;
+    color: #6c757d;
+}
+
+.ventara-audit-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.ventara-audit-grid {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(280px, 1fr) );
+    gap: 1.5rem;
+}
+
+.ventara-audit-card {
+    padding: 1.25rem;
+    border-radius: 14px;
+    background: #ffffff;
+    border: 1px solid #e1e4e8;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.ventara-audit-card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.ventara-audit-status-icon {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.ventara-audit-status-icon-good {
+    background: #198754;
+}
+
+.ventara-audit-status-icon-warning {
+    background: #ffc107;
+}
+
+.ventara-audit-status-icon-critical {
+    background: #dc3545;
+}
+
+.ventara-audit-card h2 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.ventara-audit-card-description,
+.ventara-audit-card-recommendation {
+    margin: 0 0 0.75rem 0;
+    color: #374151;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.ventara-audit-card-recommendation strong {
+    font-weight: 600;
+}

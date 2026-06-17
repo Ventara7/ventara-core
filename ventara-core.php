@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Ventara Core
  * Plugin URI:  https://example.com/
- * Description: Core functionality for the Ventara admin area.
+ * Description: Ventara administraatori põhifunktsioonid.
  * Version:     1.0.0
  * Author:      Ventara
  * Author URI:  https://example.com/
@@ -47,15 +47,23 @@ if ( ! class_exists( 'Ventara_Core' ) ) {
         }
 
         private function load_dependencies() {
+            require_once VENTARA_CORE_INCLUDES . 'class-ventara-core-i18n.php';
             require_once VENTARA_CORE_INCLUDES . 'class-ventara-core-admin.php';
             require_once VENTARA_CORE_INCLUDES . 'class-ventara-core-login.php';
+            require_once VENTARA_CORE_INCLUDES . 'class-ventara-core-audit.php';
         }
 
         private function init_hooks() {
             add_action( 'plugins_loaded', array( $this, 'load_textdomain' ) );
+            add_action( 'plugins_loaded', array( 'Ventara_Core_I18n', 'init' ) );
             add_action( 'admin_menu', array( $this, 'register_admin_menu' ) );
             add_action( 'admin_init', array( 'Ventara_Core_Admin', 'register_settings' ) );
             add_action( 'init', array( 'Ventara_Core_Login', 'init' ) );
+        }
+
+        public static function activate() {
+            Ventara_Core_Login::register_login_slug_rewrite_rule();
+            flush_rewrite_rules();
         }
 
         public function load_textdomain() {
@@ -79,8 +87,17 @@ if ( ! class_exists( 'Ventara_Core' ) ) {
 
             add_submenu_page(
                 'ventara-core-dashboard',
-                esc_html__( 'Settings', 'ventara-core' ),
-                esc_html__( 'Settings', 'ventara-core' ),
+                Ventara_Core_I18n::t( 'audit' ),
+                Ventara_Core_I18n::t( 'audit' ),
+                'manage_options',
+                'ventara-core-audit',
+                array( 'Ventara_Core_Audit', 'render_audit_page' )
+            );
+
+            add_submenu_page(
+                'ventara-core-dashboard',
+                Ventara_Core_I18n::t( 'settings' ),
+                Ventara_Core_I18n::t( 'settings' ),
                 'manage_options',
                 'ventara-core-settings',
                 array( 'Ventara_Core_Admin', 'render_settings_page' )
@@ -88,5 +105,7 @@ if ( ! class_exists( 'Ventara_Core' ) ) {
         }
     }
 }
+
+register_activation_hook( __FILE__, array( 'Ventara_Core', 'activate' ) );
 
 Ventara_Core::instance();

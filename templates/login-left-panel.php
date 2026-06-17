@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         <div class="ventara-login-left__label"><?php esc_html_e( 'Kodulehe tegi ja hooldab:', 'ventara-core' ); ?></div>
 
         <div class="ventara-login-left__logo">
-            <img src="https://ventara.ee/wp-content/uploads/2026/03/ventara_2-valge.png" alt="Ventara logo">
+            <img src="https://ventara.ee/wp-content/uploads/2026/03/ventara_2-valge.png" alt="<?php esc_attr_e( 'Ventara logo', 'ventara-core' ); ?>">
         </div>
 
         <div class="ventara-login-left__text">
@@ -27,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
             <div class="ventara-login-left__support-item">
                 <span class="ventara-login-left__support-icon">✉</span>
-                <span>E-post: <a href="mailto:info@buller.ee">info@buller.ee</a></span>
+                <span><?php esc_html_e( 'E-post:', 'ventara-core' ); ?> <a href="mailto:info@buller.ee">info@buller.ee</a></span>
             </div>
         </div>
     </div>

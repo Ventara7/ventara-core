@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 $options = get_option( 'ventara_core_options', array() );
 ?>
 <div class="wrap ventara-core-settings">
-    <h1><?php esc_html_e( 'Ventara Settings', 'ventara-core' ); ?></h1>
+    <h1><?php echo esc_html( Ventara_Core_I18n::t( 'settings' ) ); ?></h1>
 
     <form method="post" action="options.php">
         <?php
