@@ -11,6 +11,11 @@ if ( ! class_exists( 'Ventara_Core_Audit' ) ) {
         public static function render_audit_page() {
             Ventara_Core_Admin::enqueue_assets();
             $audit_results = self::get_audit_results();
+            ?>
+            <div class="wrap ventara-core-debug-notice" style="background: #fff8e5; border-left: 4px solid #ffb81c; padding: 12px 16px; margin: 16px 0; font-weight: bold; color: #333;">
+                ✓ Ventara Core Audit page loaded successfully (debug mode - assets disabled).
+            </div>
+            <?php
             include VENTARA_CORE_TEMPLATES . 'audit.php';
         }
 
