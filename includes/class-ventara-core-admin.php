@@ -35,6 +35,10 @@ if ( ! class_exists( 'Ventara_Core_Admin' ) ) {
                 VENTARA_CORE_VERSION,
                 true
             );
+        }
+
+        public static function enqueue_settings_assets() {
+            self::enqueue_assets();
 
             if ( function_exists( 'wp_enqueue_media' ) ) {
                 wp_enqueue_media();
@@ -325,7 +329,7 @@ if ( ! class_exists( 'Ventara_Core_Admin' ) ) {
         }
 
         public static function render_settings_page() {
-            self::enqueue_assets();
+            self::enqueue_settings_assets();
             include VENTARA_CORE_TEMPLATES . 'settings.php';
         }
 

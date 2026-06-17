@@ -50,12 +50,31 @@ if ( ! class_exists( 'Ventara_Core_Login' ) ) {
         }
 
         public static function enqueue_admin_notice_styles() {
+            // Only enqueue on non-Ventara admin pages to avoid conflicts
+            if ( self::is_ventara_admin_page() ) {
+                return;
+            }
+
             wp_enqueue_style(
                 'ventara-core-admin-notice',
                 VENTARA_CORE_ASSETS_URL . 'css/admin-notice.css',
                 array(),
                 VENTARA_CORE_VERSION
             );
+        }
+
+        private static function is_ventara_admin_page() {
+            global $pagenow;
+            
+            // Check if we're on a Ventara plugin page
+            if ( isset( $_GET['page'] ) ) {
+                $page = sanitize_text_field( wp_unslash( $_GET['page'] ) );
+                if ( strpos( $page, 'ventara-core' ) !== false ) {
+                    return true;
+                }
+            }
+            
+            return false;
         }
 
         public static function register_login_slug_rewrite_rule() {
