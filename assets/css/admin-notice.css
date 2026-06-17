@@ -1,0 +1,113 @@
+.notice.ventara-admin-notice {
+    display: block !important;
+    margin: 16px 0 0 0 !important;
+    padding: 0 !important;
+    background: #fff !important;
+    border-top: 1px solid #c3c4c7 !important;
+    border-right: 1px solid #c3c4c7 !important;
+    border-bottom: 1px solid #c3c4c7 !important;
+    border-left: 4px solid #2f5dff !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+.notice.ventara-admin-notice::before,
+.notice.ventara-admin-notice::after {
+    display: none !important;
+}
+
+.ventara-admin-notice__inner {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    width: 100%;
+    padding: 24px 26px 24px 20px;
+    margin: 0;
+    background: transparent;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    box-sizing: border-box;
+}
+
+.ventara-admin-notice__logo {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #2f5dff;
+    padding: 0;
+    border-radius: 0 !important;
+    overflow: hidden;
+}
+
+.ventara-admin-notice__logo a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ventara-admin-notice__logo img {
+    display: block;
+    width: auto;
+    height: 69px;
+    max-width: 160px;
+    object-fit: contain;
+    border-radius: 0 !important;
+}
+
+.ventara-admin-notice__content {
+    flex: 1 1 auto;
+    min-width: 0;
+    width: 100%;
+    color: #1f2937;
+}
+
+.ventara-admin-notice__title {
+    margin: 0 0 6px 0;
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.ventara-admin-notice__desc {
+    margin: 0 0 8px 0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #4b5563;
+}
+
+.ventara-admin-notice__contact {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #1f2937;
+}
+
+.ventara-admin-notice__content a {
+    color: #2f5dff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.ventara-admin-notice__content a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 782px) {
+    .ventara-admin-notice__inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 18px 16px;
+    }
+
+    .ventara-admin-notice__logo img {
+        height: 56px;
+        max-width: 140px;
+    }
+}

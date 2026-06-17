@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+html,
+body.login {
+    margin: 0 !important;
+    padding: 0 !important;
+    min-height: 100vh !important;
+    width: 100% !important;
+    background: #ffffff !important;
+    font-family: "Montserrat", sans-serif !important;
+    overflow-x: hidden !important;
+}
+
+body.login h1,
+body.login h1 a {
+    display: none !important;
+}
+
+body.login #login {
+    position: relative !important;
+    z-index: 2 !important;
+    margin: 0 0 0 60vw !important;
+    width: 40vw !important;
+    max-width: none !important;
+    min-height: 100vh !important;
+    padding: 48px 48px 40px !important;
+    box-sizing: border-box !important;
+    background: #ffffff !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+body.login #login > * {
+    width: 100%;
+    max-width: 520px;
+}
+
+.ventara-login-left {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 60vw;
+    height: 100vh;
+    padding: 60px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #2f5dff 0%, #2149d8 100%);
+    z-index: 1;
+    overflow-y: auto;
+}
+
+.ventara-login-left__inner {
+    width: 100%;
+    max-width: 560px;
+    color: #ffffff;
+}
+
+.ventara-login-left__label {
+    display: block;
+    margin-bottom: 28px;
+    font-size: 20px;
+    line-height: 1.4;
+    font-weight: 300;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.92);
+}
+
+.ventara-login-left__logo {
+    margin-top: 10px;
+    margin-bottom: 24px;
+}
+
+.ventara-login-left__logo img {
+    width: 240px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.ventara-login-left__text {
+    font-size: 22px;
+    line-height: 1.4;
+    font-weight: 300;
+    letter-spacing: -0.01em;
+    color: #ffffff;
+    max-width: 640px;
+    margin: 0;
+}
+
+.ventara-login-left__spacer {
+    display: block;
+    width: 100%;
+    height: 140px;
+}
+
+.ventara-login-left__support-title {
+    margin: 0 0 10px 0 !important;
+    font-size: 20px;
+    line-height: 1.4;
+    font-weight: 400;
+    color: rgba(255,255,255,0.95);
+}
+
+.ventara-login-left__support-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+    font-size: 17px;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.92);
+}
+
+.ventara-login-left__support-icon {
+    width: 22px;
+    min-width: 22px;
+    height: 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255,255,255,0.35);
+    border-radius: 50%;
+    font-size: 12px;
+    color: #ffffff;
+}
+
+.ventara-login-left__support a {
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+.ventara-login-site-logo {
+    text-align: center;
+    margin: 0 auto 45px auto !important;
+}
+
+.ventara-login-site-logo img {
+    display: block !important;
+    width: auto;
+    max-width: 220px;
+    max-height: 100px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.ventara-login-info {
+    width: 100%;
+    max-width: 520px;
+    margin: 22px auto 60px auto !important;
+    text-align: center;
+}
+
+.ventara-login-info__message {
+    margin-bottom: 12px;
+    font-size: 15px;
+    line-height: 1.65;
+    color: #1f2937;
+}
+
+.ventara-login-info__warning {
+    font-size: 14px;
+    line-height: 1.65;
+    color: #4b5563;
+}
+
+#loginform,
+#lostpasswordform,
+#admin-email-confirm-form {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 30px 30px 24px !important;
+    box-sizing: border-box !important;
+    background: #ffffff !important;
+    border: 1px solid #e3e8ef !important;
+    border-radius: 20px !important;
+    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08) !important;
+}
+
+body.login form .input,
+body.login input[type="text"],
+body.login input[type="password"],
+body.login input[type="email"] {
+    width: 100% !important;
+    min-height: 52px !important;
+    padding: 0 14px !important;
+    box-sizing: border-box !important;
+    border-radius: 12px !important;
+    border: 1px solid #d7dee8 !important;
+    background: #ffffff !important;
+    box-shadow: none !important;
+    font-size: 15px !important;
+}
+
+body.login label {
+    color: #1f2937 !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+}
+
+body.login p {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    color: #4b5563 !important;
+}
+
+body.login p.submit {
+    margin-top: 18px !important;
+}
+
+.wp-core-ui .button.button-primary {
+    width: 100% !important;
+    min-height: 52px !important;
+    border: 0 !important;
+    border-radius: 12px !important;
+    background: #2f5dff !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    text-align: center !important;
+}
+
+.wp-core-ui .button.button-primary:hover,
+.wp-core-ui .button.button-primary:focus {
+    background: #2149d8 !important;
+}
+
+body.login-action-confirm_admin_email #admin-email-confirm-form .button {
+    width: auto !important;
+    min-height: 44px !important;
+    padding: 0 18px !important;
+    border-radius: 10px !important;
+}
+
+body.login-action-confirm_admin_email #admin-email-confirm-form .button-primary {
+    width: 100% !important;
+    min-height: 52px !important;
+    margin-top: 10px !important;
+}
+
+body.login-action-confirm_admin_email #admin-email-confirm-form .admin-email__actions-primary,
+body.login-action-confirm_admin_email #admin-email-confirm-form .admin-email__actions-secondary {
+    display: block !important;
+    width: 100% !important;
+    margin: 10px 0 0 0 !important;
+    padding: 0 !important;
+}
+
+body.login #nav,
+body.login #backtoblog {
+    text-align: center;
+    padding: 0;
+    margin-top: 18px;
+}
+
+body.login #nav a,
+body.login #backtoblog a,
+body.login .privacy-policy-page-link a,
+body.login .admin-email__actions-secondary a {
+    color: #4b5563 !important;
+    text-decoration: none !important;
+    font-size: 14px !important;
+}
+
+body.login #nav a:hover,
+body.login #backtoblog a:hover,
+body.login .privacy-policy-page-link a:hover,
+body.login .admin-email__actions-secondary a:hover {
+    text-decoration: underline !important;
+}
+
+#wpml-login-ls-form,
+.language-switcher {
+    display: none !important;
+}
+
+@media (max-width: 1100px) {
+    html,
+    body.login {
+        background: #f5f7fb !important;
+    }
+
+    .ventara-login-left {
+        position: relative !important;
+        width: 100% !important;
+        height: auto !important;
+        padding: 24px 20px !important;
+        display: block !important;
+        overflow: visible !important;
+    }
+
+    .ventara-login-left__inner {
+        max-width: 680px !important;
+        margin: 0 auto !important;
+    }
+
+    .ventara-login-left__label {
+        margin-bottom: 12px !important;
+        font-size: 15px !important;
+    }
+
+    .ventara-login-left__logo img {
+        width: 200px !important;
+    }
+
+    .ventara-login-left__text {
+        font-size: 16px !important;
+        line-height: 1.6 !important;
+        margin: 0 0 22px 0 !important;
+    }
+
+    .ventara-login-left__spacer {
+        display: none !important;
+    }
+
+    .ventara-login-left__support-title {
+        font-size: 16px !important;
+    }
+
+    .ventara-login-left__support-item {
+        font-size: 14px !important;
+        margin-bottom: 8px !important;
+    }
+
+    body.login #login {
+        margin: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-height: auto !important;
+        padding: 28px 20px 34px !important;
+        display: block !important;
+        background: #f5f7fb !important;
+    }
+
+    body.login #login > * {
+        width: 100% !important;
+        max-width: 520px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .ventara-login-site-logo {
+        margin: 0 auto 24px auto !important;
+    }
+
+    .ventara-login-info {
+        margin: 0 auto 26px auto !important;
+        text-align: justify !important;
+    }
+
+    #loginform,
+    #lostpasswordform,
+    #admin-email-confirm-form {
+        width: 100% !important;
+        margin: 0 auto !important;
+        padding: 24px 20px 20px !important;
+        border-radius: 20px !important;
+        box-shadow: none !important;
+    }
+
+    body.login form .input,
+    body.login input[type="text"],
+    body.login input[type="password"],
+    body.login input[type="email"] {
+        min-height: 50px !important;
+        height: 50px !important;
+        font-size: 16px !important;
+    }
+}
+
+@media (max-width: 680px) {
+    .ventara-login-left {
+        padding: 20px 16px !important;
+    }
+
+    .ventara-login-left__logo img {
+        width: 170px !important;
+    }
+
+    .ventara-login-left__text {
+        font-size: 15px !important;
+    }
+
+    body.login #login {
+        padding: 26px 16px 30px !important;
+    }
+
+    .ventara-login-site-logo img {
+        max-width: 180px !important;
+        max-height: 70px !important;
+    }
+
+    #loginform,
+    #lostpasswordform,
+    #admin-email-confirm-form {
+        padding: 20px 16px 18px !important;
+        border-radius: 18px !important;
+    }
+}
