@@ -3,7 +3,7 @@
  * Plugin Name: Ventara Core
  * Plugin URI:  https://example.com/
  * Description: Ventara administraatori põhifunktsioonid.
- * Version:     1.0.0
+ * Version:     1.0.1
  * Author:      Ventara
  * Author URI:  https://example.com/
  * Text Domain: ventara-core
